@@ -9,6 +9,8 @@
 
 html {
     font-family: "Poppins", sans-serif;
+    user-select: none;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -29,6 +31,16 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--gray);
+}
+
 nav {
     opacity: 0;
     height: 100svh;
@@ -39,7 +51,7 @@ nav {
     align-items: center;
     position: fixed;
     left: 0;
-    z-index: 1000;
+    z-index: 1002;
     animation: fade-in 2s 1.5s;
     animation-fill-mode: forwards;
 }
@@ -89,6 +101,7 @@ main {
 .welcome-container {
     height: 100%;
     width: 95%;
+    padding-left: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,7 +129,7 @@ main {
 
 .title {
     color: white;
-    width: 90%;
+    width: 310px;
     font-size: 150%;
     border-right: 2px solid rgb(235, 235, 235);
     white-space: nowrap;
@@ -148,18 +161,40 @@ main {
     filter: grayscale(100%);
     height: 50%;
     border-radius: 50%;
-    margin-left: 10rem;
+    margin-left: 15rem;
 }
 
 .about-me-container {
+    padding-left: 2rem;
     height: 100%;
     width: 95%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     background: linear-gradient(90deg, #ffffff00, #ffffff46);
     /* border-top-right-radius: 50svh; */
     border-bottom-right-radius: 50svh;
+}
+
+.about-me-title {
+    color: white;
+    font-size: 500%;
+}
+
+.about-me-info-container {
+    /* background-color: #ffffff63; */
+    height: 70%;
+    width: 60%;
+    border-radius: 15vh;
+}
+
+.projects-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -179,6 +214,24 @@ main {
     animation: scroll-bar linear;
     animation-timeline: scroll();
 }
+
+.btnScrollToTop {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: 1003;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-justify: center;
+    text-align: center;
+    border-radius: 50%;
+    display: none;
+}
+
 
 /* Animations */
 
