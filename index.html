@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <a class="btnScrollToTop" data-scroll="up" type="button">^<br/>to top</a>
+
+    <a href="#welcome" class="btnScrollToTop" data-scroll="up" type="button">^<br/>to top</a>
     <div class="scrollbar"></div>
     <nav class="navbar">
         <div id="top-line" class="navbar-line"></div>
@@ -22,6 +23,7 @@
         </ul>
         <div id="bot-line" class="navbar-line"></div>
     </nav>
+
     <main>
         <section id="welcome" class="welcome-container">
             <section class="title-container">
@@ -33,13 +35,24 @@
             <img class="profile-img" src="./assets/images/profile-image.png"/>
         </section>
         <section id="about" class="about-me-container">
-            <h2 class="about-me-title">About Me</h2>
+            <h2 class="container-title">About Me</h2>
             <div class="about-me-info-container">
                 <div class="about-me-desc"></div>
             </div>
         </section>
         <section id="projects" class="projects-container">
-
+            <h2 class="container-title">Projects</h2>
+            <div class="projects-display-container">
+                <div id="first-project" class="projects-card">
+                    <img src="./assets/images/file-processor.png" class="project-card-img"></img>
+                </div>
+                <div class="projects-cards-grid">
+                    <div class="projects-card"></div>
+                    <div class="projects-card"></div>
+                    <div class="projects-card"></div>
+                    <div class="projects-card"></div>
+                </div>
+            </div>
         </section>
     </main>
 
