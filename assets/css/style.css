@@ -5,6 +5,7 @@
     --backwards-background: linear-gradient(210deg, #c493fc, #c7864a);
     --black: #2E2C2F;
     --gray: #475B63;
+    --peach: peachpuff;
 }
 
 html {
@@ -38,14 +39,13 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-
-a {
+li a {
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
 
-a:hover {
+li a:hover {
     color: var(--gray);
 }
 
@@ -115,7 +115,6 @@ main {
     justify-content: center;
     background: linear-gradient(90deg, #ffffff00, #ffffff46);
     border-top-right-radius: 50svh;
-    /* border-bottom-right-radius: 50svh; */
     animation: slide-in .7s;
     animation-fill-mode: forwards;
 }
@@ -211,7 +210,7 @@ main {
 
 .projects-display-container {
     height: 75%;
-    width: 70%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -223,15 +222,53 @@ main {
     width: 18rem;
     border-radius: 2rem;
     margin: .5rem;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
+    color: white;
+    background-color: #2E2C2F;
 }
 
-.projects-card:hover {
-    box-shadow: -10px 10px 10px #2e2c2f2b;
+.project-card-desc-container {
+    position: absolute;
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background: var(--black);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: opacity 0.3s;
+}
+
+.projects-card:hover .project-card-desc-container {
+    visibility: visible;
+    opacity: 1;
+    /* color: white; */
+}
+
+.project-card-title {
+    color: white;
+    text-decoration-color: white;
+    font-size: 1.5rem;
+    margin: 0 1.5rem;
+}
+
+.project-card-title:hover {
+    color: var(--peach);
+    text-decoration-color: var(--peach);
+}
+
+.project-card-desc {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #first-project {
@@ -242,7 +279,7 @@ main {
 
 .projects-cards-grid {
     height: 65%;
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -284,6 +321,29 @@ main {
     text-align: center;
     border-radius: 50%;
     display: none;
+}
+
+.resume-container {
+    padding-left: 2rem;
+    height: 100%;
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, #ffffff00, #ffffff46);
+}
+
+.contact-container {
+    padding-left: 2rem;
+    height: 100%;
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, #ffffff00, #ffffff46);
+    border-bottom-right-radius: 50svh;
 }
 
 

@@ -19,12 +19,13 @@
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#resume">Resume</a></li>
-            <li><a href="#hire-me">Hire Me</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <div id="bot-line" class="navbar-line"></div>
     </nav>
 
     <main>
+        <!-- This section is the welcome/home container when the page is loaded -->
         <section id="welcome" class="welcome-container">
             <section class="title-container">
                 <h1 class="name">Drew Easter</h1>
@@ -34,25 +35,70 @@
             </section>
             <img class="profile-img" src="./assets/images/profile-image.png"/>
         </section>
+
+        <!-- This is the "About Me" section-->
         <section id="about" class="about-me-container">
             <h2 class="container-title">About Me</h2>
             <div class="about-me-info-container">
                 <div class="about-me-desc"></div>
             </div>
         </section>
+
+        <!-- This is the section that houses all of my projects/applications. All of the cards will change when they are hovered over and allow the user to click on the title.-->
         <section id="projects" class="projects-container">
             <h2 class="container-title">Projects</h2>
             <div class="projects-display-container">
                 <div id="first-project" class="projects-card">
-                    <img src="./assets/images/file-processor.png" class="project-card-img"></img>
+                    <img src="./assets/images/file-processor.png" class="project-card-img"/>
+                    <div class="project-card-desc-container">
+                        <!-- Each title will take you to the respective GitHub repository -->
+                        <h2><a class="project-card-title" href="https://github.com/drewheaster/file-renamer-infinite" target="_blank">File Processor</a></h2>
+                        <p class="project-card-desc">This is a Python script that I wrote to assist me with my daily tasks at work, from resizing, renaming, saving, and publishing image files with the click of a button</p>
+                    </div>
                 </div>
                 <div class="projects-cards-grid">
-                    <div class="projects-card"></div>
-                    <div class="projects-card"></div>
-                    <div class="projects-card"></div>
-                    <div class="projects-card"></div>
+                    <div class="projects-card" id="second-project">
+                        <img src="./assets/images/file-processor.png" class="project-card-img"/>
+                        <div class="project-card-desc-container">
+                            <!-- Each title will take you to the respective GitHub repository -->
+                            <h2><a class="project-card-title" href="https://github.com/drewheaster/file-renamer-infinite" target="_blank">File Processor</a></h2>
+                            <p class="project-card-desc">This is a Python script that I wrote to assist me with my daily tasks at work, from resizing, renaming, saving, and publishing image files with the click of a button</p>
+                        </div>
+                    </div>
+                    <div class="projects-card" id="third-project">
+                        <img src="./assets/images/file-processor.png" class="project-card-img"/>
+                        <div class="project-card-desc-container">
+                            <!-- Each title will take you to the respective GitHub repository -->
+                            <h2><a class="project-card-title" href="https://github.com/drewheaster/file-renamer-infinite" target="_blank">File Processor</a></h2>
+                            <p class="project-card-desc">This is a Python script that I wrote to assist me with my daily tasks at work, from resizing, renaming, saving, and publishing image files with the click of a button</p>
+                        </div>
+                    </div>
+                    <div class="projects-card" id="fourth-project">
+                        <img src="./assets/images/file-processor.png" class="project-card-img"/>
+                        <div class="project-card-desc-container">
+                            <!-- Each title will take you to the respective GitHub repository -->
+                            <h2><a class="project-card-title" href="https://github.com/drewheaster/file-renamer-infinite" target="_blank">File Processor</a></h2>
+                            <p class="project-card-desc">This is a Python script that I wrote to assist me with my daily tasks at work, from resizing, renaming, saving, and publishing image files with the click of a button</p>
+                        </div>
+                    </div>
+                    <div class="projects-card" id="fifth-project">
+                        <img src="./assets/images/file-processor.png" class="project-card-img"/>
+                        <div class="project-card-desc-container">
+                            <!-- Each title will take you to the respective GitHub repository -->
+                            <h2><a class="project-card-title" href="https://github.com/drewheaster/file-renamer-infinite" target="_blank">File Processor</a></h2>
+                            <p class="project-card-desc">This is a Python script that I wrote to assist me with my daily tasks at work, from resizing, renaming, saving, and publishing image files with the click of a button</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <section id="resume" class="resume-container">
+
+        </section>
+
+        <section id="contact" class="contact-container">
+
         </section>
     </main>
 
