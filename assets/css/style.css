@@ -14,6 +14,25 @@ html {
     scroll-behavior: smooth;
 }
 
+.btnScrollToTop {
+    font-weight: 600;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: 1003;
+    color: rgba(255, 255, 255, 0.534);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-justify: center;
+    text-align: center;
+    border-radius: 50%;
+    display: none;
+    text-decoration: none;
+}
+
 body {
     background: var(--background);
     background-repeat: no-repeat;
@@ -28,27 +47,27 @@ body {
     position: relative;
 }
 
-.window {
-    padding-left: 2rem;
-    background: var(--background);
-    height: 100svh;
-    width: 100svw;
-}
-
+/* Removes scrollbar from the page so that I can add a personalized one */
 body::-webkit-scrollbar {
     display: none;
 }
 
-li a {
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
+/* personalized scrollbar that visually tracks the scroll down the page */
+.scrollbar {
+    height: 100svh;
+    width: 10px;
+    position: fixed;
+    z-index: 1001;
+    background-color: rgba(255, 255, 255, 0.397);
+    right: 0;
+    transform-origin: top;
+    scale: 1 0;
+    animation: scroll-bar linear;
+    animation-timeline: scroll();
 }
 
-li a:hover {
-    color: var(--gray);
-}
 
+/* Navbar located on the left side of the page. This navbar stays in that location for a regular desktop user */
 nav {
     opacity: 0;
     height: 100svh;
@@ -80,6 +99,16 @@ nav ul li:hover {
     color: var(--gray);
 }
 
+li a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+li a:hover {
+    color: var(--gray);
+}
+
 .navbar-line {
     width: 2px;
     height: 30%;
@@ -101,11 +130,13 @@ nav ul li:hover {
     animation-fill-mode: forwards;
 }
 
+/* Sets the height and width for the sections that hold my professional information */
 main {
     height: 100%;
     width: 100%;
 }
 
+/* What could be considered the "home" page, this houses my personal introductory information. */
 .welcome-container {
     height: 100%;
     width: 92%;
@@ -134,6 +165,8 @@ main {
     font-weight: 600;
     margin-bottom: 3rem;
 }
+
+/* This section through line 199 is what creates the "title" tag. It is made to resemble actual lines of HTML */
 
 .title {
     color: white;
@@ -165,6 +198,7 @@ main {
     color: #ffa68b;
 }
 
+/* My professional headshot */
 .profile-img {
     filter: grayscale(100%);
     height: 50%;
@@ -172,6 +206,7 @@ main {
     margin-left: 15rem;
 }
 
+/* An About Me Section */
 .about-me-container {
     padding-left: 2rem;
     height: 100%;
@@ -183,18 +218,19 @@ main {
     background: linear-gradient(90deg, #ffffff00, #ffffff46);
 }
 
+/* This class is applied to each section title */
 .container-title {
     color: white;
     font-size: 500%;
 }
 
 .about-me-info-container {
-    /* background-color: #ffffff63; */
     height: 70%;
     width: 60%;
     border-radius: 15vh;
 }
 
+/* This section holds my projects */
 .projects-container {
     padding-left: 2rem;
     height: 100%;
@@ -249,7 +285,6 @@ main {
 .projects-card:hover .project-card-desc-container {
     visibility: visible;
     opacity: 1;
-    /* color: white; */
 }
 
 .project-card-title {
@@ -271,6 +306,7 @@ main {
     justify-content: center;
 }
 
+/* This signifies the first/top project on my portfolio. It is made to be larger than the following cards. */
 #first-project {
     width: 48%;
     height: 35%;
@@ -291,38 +327,7 @@ main {
     width: 100%;
 }
 
-
-.scrollbar {
-    height: 100svh;
-    width: 10px;
-    position: fixed;
-    z-index: 1001;
-    background-color: rgba(255, 255, 255, 0.397);
-    right: 0;
-    transform-origin: top;
-    scale: 1 0;
-    animation: scroll-bar linear;
-    animation-timeline: scroll();
-}
-
-.btnScrollToTop {
-    font-weight: 600;
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
-    width: 4rem;
-    height: 4rem;
-    z-index: 1003;
-    color: rgba(255, 255, 255, 0.534);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-justify: center;
-    text-align: center;
-    border-radius: 50%;
-    display: none;
-}
-
+/* This is the section for my Resume */
 .resume-container {
     padding-left: 2rem;
     height: 100%;
@@ -334,6 +339,20 @@ main {
     background: linear-gradient(90deg, #ffffff00, #ffffff46);
 }
 
+.resume-container a {
+    height: 70%;
+}
+
+.resume-img {
+    height: 100%;
+    transition: scale 0.3s ease;
+}
+
+.resume-img:hover {
+    scale: 150%;
+}
+
+/* This is the contact information section */
 .contact-container {
     padding-left: 2rem;
     height: 100%;
@@ -347,7 +366,7 @@ main {
 }
 
 
-/* Animations */
+/* Animations used to make the user experience smooth and enjoyable */
 
 @keyframes scroll-bar {
     to {scale: 1 1;}
