@@ -29,6 +29,10 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    @media (max-width: 600px) {
+        flex-direction: column;
+        width: 100svw;
+    }
 }
 
 /* Removes scrollbar from the page so that I can add a personalized one */
@@ -85,6 +89,15 @@ nav {
     animation: fade-in 2s 1.5s;
     animation-fill-mode: forwards;
     margin-left: 1rem;
+    @media (max-width: 600px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        top: 0;
+        height: 5%;
+        width: 100svw;
+        margin: 0;
+    }
 }
 
 nav ul {
@@ -92,6 +105,14 @@ nav ul {
     font-size: 200%;
     width: fit-content;
     height: 33%;
+    @media (max-width: 600px) {
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 100%;
+    }
 }
 
 nav ul li {
@@ -118,6 +139,10 @@ li a:hover {
     height: 30%;
     background-color: white;
     border-radius: 2px;
+    @media (max-width: 600px) {
+        height: 1px;
+        width: 20px;
+    }
 }
 
 #top-line {
@@ -152,6 +177,14 @@ main {
     border-top-right-radius: 50svh;
     animation: slide-in .7s;
     animation-fill-mode: forwards;
+    @media (max-width: 600px) {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border-radius: 0;
+        animation: none;
+    }
 }
 
 .title-container {
@@ -161,6 +194,16 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    @media (max-width: 600px) {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+.title-container p {
+    @media (max-width: 600px) {
+        margin-left: 2.5rem;
+    }
 }
 
 .name {
@@ -168,6 +211,9 @@ main {
     font-size: 500%;
     font-weight: 600;
     margin-bottom: 3rem;
+    @media (max-width: 600px) {
+        text-align: center;
+    }
 }
 
 /* This section through line 199 is what creates the "title" tag. It is made to resemble actual lines of HTML */
@@ -180,6 +226,9 @@ main {
     white-space: nowrap;
     overflow: hidden;
     animation: typing 2s steps(23), cursor .4s step-end infinite alternate;
+    @media (max-width: 600px) {
+        margin-left: 2.5rem;
+    }
 }
 
 .title-code {
@@ -208,6 +257,10 @@ main {
     height: 30rem;
     border-radius: 50%;
     margin-left: 15rem;
+    @media (max-width: 600px) {
+        margin: 0;
+        height: 20rem;
+    }
 }
 
 /* An About Me Section */
