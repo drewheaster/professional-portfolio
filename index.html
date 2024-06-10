@@ -40,7 +40,28 @@
         <section id="about" class="about-me-container">
             <h2 class="container-title">About Me</h2>
             <div class="about-me-info-container">
-                <div class="about-me-desc"></div>
+                <div class="skills-bar">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-node-js"></i>
+                    <i class="fa-brands fa-react"></i>
+                    <i class="fa-brands fa-python"></i>
+                </div>
+                <div class="about-me-desc">
+                    <div>
+                        <h2 class="desc-title">Where I've Been -</h2>
+                        <p class="">I started learning about software development in May of 2023. I didn't have a technical background, so when I learned what was possible through code even at the basic level, I was hooked.</p>
+                    </div>
+                    <div>
+                        <h2 class="desc-title">Where I Am -</h2>
+                        <p class="">Since I began my journey with Python scripts, I've developed the desire to learn more about web development. Currently, I'm taking a course on full-stack development through SMU in Dallas, TX. I love working in React, creating webpages, and writing clean code!</p>
+                    </div>
+                    <div>
+                        <h2 class="desc-title">Where I'm Going -</h2>
+                        <p class="">I look forward to completing my classes and taking on a Front-End developer or a Full-Stack developer role full-time. I'm interested in the startup space, as well as creating clean code for anyone looking to hire!</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -89,24 +110,35 @@
             </div>
         </section>
 
+        <!-- Resume section -->
         <section id="resume" class="resume-container">
             <h2 class="container-title">My Resume</h2>
             <a href="./assets/images/Drew-Easter-Resume.pdf" download="Drew-Easter-Resume" target="_blank"><img class="resume-img" src="./assets/images/resume-img.png"/></a>
         </section>
 
+        <!-- Contact me section -->
         <section id="contact" class="contact-container">
             <h2 class="container-title">Contact Me</h2>
             <div class="contact-options-container">
-                <div class="socials"></div>
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" target="_blank">
+                    <input type="hidden" name="access_key" value="f191010d-537c-4d1a-82dc-18de556affea">
+                    <input type="text" name="name" placeholder="Your Name" class="contact-form-inputs" required/>
+                    <input type="text" name="email" placeholder="Your Email" class="contact-form-inputs" required/>
+                    <textarea name="message" placeholder="Message me!" class="contact-form-inputs" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
                 <div class="contact-info">
-                    <h3>My Number: 214-771-2302</h3>
+                    <h3>My Email: <a href="mailto: drewheaster@gmail.com" target="_blank">drewheaster@gmail.com</a></h3>
+                    <h3>My Number: <a href="tel: 2147712302">214-771-2302</a></h3>
+                    <h3>My LinkedIn: <a href="https://www.linkedin.com/in/drew-easter-14a6581a9/" target="_blank">LinkedIn</a></h3>
+                    <h3>My GitHub: <a href="https://github.com/drewheaster" target="_blank">GitHub</a></h3>
                 </div>
             </div>
         </section>
     </main>
 
     <script src="./assets/script.js"></script>
-    
+    <script src="https://kit.fontawesome.com/11a7843a2d.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

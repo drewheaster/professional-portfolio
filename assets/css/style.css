@@ -1,36 +1,20 @@
+/* This is importing the "Poppins" font from GoogleFonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Reusable variables */
 :root {
     --background: linear-gradient(30deg, #c493fc, #c7864a);
     --backwards-background: linear-gradient(210deg, #c493fc, #c7864a);
     --black: #2E2C2F;
     --gray: #475B63;
     --peach: peachpuff;
+    --translucent: #ffffff65;
 }
 
 html {
     font-family: "Poppins", sans-serif;
     user-select: none;
     scroll-behavior: smooth;
-}
-
-.btnScrollToTop {
-    font-weight: 600;
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
-    width: 4rem;
-    height: 4rem;
-    z-index: 1003;
-    color: rgba(255, 255, 255, 0.534);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-justify: center;
-    text-align: center;
-    border-radius: 50%;
-    display: none;
-    text-decoration: none;
 }
 
 body {
@@ -58,7 +42,7 @@ body::-webkit-scrollbar {
     width: 10px;
     position: fixed;
     z-index: 1001;
-    background-color: rgba(255, 255, 255, 0.397);
+    background-color: var(--translucent);
     right: 0;
     transform-origin: top;
     scale: 1 0;
@@ -66,6 +50,25 @@ body::-webkit-scrollbar {
     animation-timeline: scroll();
 }
 
+/* A button that appears after the user scrolls past the first page */
+.btnScrollToTop {
+    font-weight: 600;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: 1003;
+    color: rgba(255, 255, 255, 0.534);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-justify: center;
+    text-align: center;
+    border-radius: 50%;
+    display: none;
+    text-decoration: none;
+}
 
 /* Navbar located on the left side of the page. This navbar stays in that location for a regular desktop user */
 nav {
@@ -81,6 +84,7 @@ nav {
     z-index: 1002;
     animation: fade-in 2s 1.5s;
     animation-fill-mode: forwards;
+    margin-left: 1rem;
 }
 
 nav ul {
@@ -201,7 +205,7 @@ main {
 /* My professional headshot */
 .profile-img {
     filter: grayscale(100%);
-    height: 50%;
+    height: 30rem;
     border-radius: 50%;
     margin-left: 15rem;
 }
@@ -218,6 +222,24 @@ main {
     background: linear-gradient(90deg, #ffffff00, #ffffff46);
 }
 
+.about-me-desc {
+    width: 70%;
+    height: 80%;
+    border-radius: 2rem;
+    background-color: white;
+    color: var(--black);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.about-me-desc h2 {
+    font-size: 150%;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
 /* This class is applied to each section title */
 .container-title {
     color: white;
@@ -227,7 +249,29 @@ main {
 .about-me-info-container {
     height: 70%;
     width: 60%;
-    border-radius: 15vh;
+    border-radius: 5rem;
+    background-color: var(--translucent);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.skills-bar {
+    height: 85%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fa-brands {
+    color: var(--translucent);
+    font-size: 400%;
+}
+
+.fa-brands:hover {
+    color: #7c7c7c;
 }
 
 /* This section holds my projects */
@@ -240,8 +284,6 @@ main {
     align-items: center;
     justify-content: space-evenly;
     background: linear-gradient(90deg, #ffffff00, #ffffff46);
-    z-index: 100;
-    overflow: show;
 }
 
 .projects-display-container {
@@ -365,6 +407,90 @@ main {
     border-bottom-right-radius: 50svh;
 }
 
+.contact-options-container {
+    height: 70%;
+    width: 70%;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 2rem;
+}
+
+.contact-form {
+    height: 100%;
+    width: 45%;
+    background: var(--translucent);
+    border-radius: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-info {
+    text-align: left;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info h3 {
+    color: white;
+    margin: 1rem;
+    font-size: 150%;
+}
+
+.contact-info h3 a {
+    text-decoration-color: white;
+    color: white;
+}
+
+.contact-info h3 a:hover {
+    color: var(--gray);
+    text-decoration-color: var(--gray);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-form-inputs {
+    width: 80%;
+    border: none;
+    min-height: 2rem;
+    max-width: 80%;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    font-family: "Poppins";
+    outline: none;
+}
+
+.contact-form-inputs::placeholder {
+    color: var(--gray);
+}
+
+form textarea {
+    height: 60%;
+    max-height: 60%;
+    font-family: "Poppins";
+}
+
+form button {
+    border: none;
+    width: 7rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: #d4aeff;
+    color: white;
+    font-family: "Poppins";
+    font-weight: 600;
+    cursor: pointer;
+}
 
 /* Animations used to make the user experience smooth and enjoyable */
 
