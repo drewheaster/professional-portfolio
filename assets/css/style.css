@@ -321,7 +321,7 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .projects-card:hover .project-card-desc-container {
@@ -391,7 +391,7 @@ main {
 }
 
 .resume-img:hover {
-    scale: 150%;
+    scale: 140%;
 }
 
 /* This is the contact information section */
