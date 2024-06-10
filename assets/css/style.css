@@ -315,7 +315,7 @@ main {
     height: 100%;
     width: 100%;
     opacity: 0;
-    background: var(--black);
+    background: #363333;
     color: white;
     display: flex;
     flex-direction: column;
@@ -337,8 +337,8 @@ main {
 }
 
 .project-card-title:hover {
-    color: var(--peach);
-    text-decoration-color: var(--peach);
+    color: #dcbdff;
+    text-decoration-color: #dcbdff;
 }
 
 .project-card-desc {
