@@ -29,6 +29,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    /* Each one of these media queries changes properties about sections of the page to fir a mobile user experience. */
     @media (max-width: 600px) {
         flex-direction: column;
         width: 100svw;
