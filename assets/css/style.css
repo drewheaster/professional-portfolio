@@ -32,7 +32,7 @@ body {
     /* Each one of these media queries changes properties about sections of the page to fir a mobile user experience. */
     @media (max-width: 600px) {
         flex-direction: column;
-        width: 100svw;
+        width: 100dvw;
     }
 }
 
@@ -76,9 +76,6 @@ body::-webkit-scrollbar {
     border-radius: 50%;
     display: none;
     text-decoration: none;
-    @media (max-width: 600px) {
-        display: none;
-    }
 }
 
 /* Navbar located on the left side of the page. This navbar stays in that location for a regular desktop user */
@@ -494,18 +491,33 @@ main {
 
 .resume-container a {
     height: 70%;
+    @media (max-width: 600px) {
+        height: 3rem;
+    }
 }
 
 .resume-img {
     height: 100%;
     transition: scale 0.3s ease;
     @media (max-width: 600px) {
-        height: 70%;
+        display: none;
     }
 }
 
 .resume-img:hover {
     scale: 140%;
+}
+
+.resume-download {
+    display: none;
+    @media (max-width: 600px) {
+        display: block;
+        font-size: 150%;
+        text-align: center;
+        text-justify: center;
+        color: white;
+        margin-bottom: 70%;
+    }
 }
 
 /* This is the contact information section */
