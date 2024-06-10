@@ -52,6 +52,9 @@ body::-webkit-scrollbar {
     scale: 1 0;
     animation: scroll-bar linear;
     animation-timeline: scroll();
+    @media (max-width: 600px) {
+        display: none;
+    }
 }
 
 /* A button that appears after the user scrolls past the first page */
@@ -72,6 +75,9 @@ body::-webkit-scrollbar {
     border-radius: 50%;
     display: none;
     text-decoration: none;
+    @media (max-width: 600px) {
+        display: none;
+    }
 }
 
 /* Navbar located on the left side of the page. This navbar stays in that location for a regular desktop user */
@@ -95,7 +101,7 @@ nav {
         align-items: center;
         top: 0;
         height: 5%;
-        width: 100svw;
+        width: 100dvw;
         margin: 0;
     }
 }
@@ -263,6 +269,16 @@ main {
     }
 }
 
+/* This class is applied to each section title */
+.container-title {
+    color: white;
+    font-size: 500%;
+    @media (max-width: 600px) {
+        font-size: 300%;
+        text-align: center;
+    }
+}
+
 /* An About Me Section */
 .about-me-container {
     padding-left: 2rem;
@@ -273,6 +289,26 @@ main {
     align-items: center;
     justify-content: space-evenly;
     background: linear-gradient(90deg, #ffffff00, #ffffff46);
+    @media (max-width: 600px) {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+}
+
+.about-me-info-container {
+    height: 70%;
+    width: 60%;
+    border-radius: 5rem;
+    background-color: var(--translucent);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    @media (max-width: 600px) {
+        width: 95%;
+        font-size: 70%;
+    }
 }
 
 .about-me-desc {
@@ -285,28 +321,15 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    @media (max-width: 600px) {
+        padding: 1rem;
+    }
 }
 
 .about-me-desc h2 {
     font-size: 150%;
     font-weight: 600;
     margin-bottom: 1rem;
-}
-
-/* This class is applied to each section title */
-.container-title {
-    color: white;
-    font-size: 500%;
-}
-
-.about-me-info-container {
-    height: 70%;
-    width: 60%;
-    border-radius: 5rem;
-    background-color: var(--translucent);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 }
 
 .skills-bar {
@@ -337,6 +360,10 @@ main {
     align-items: center;
     justify-content: space-evenly;
     background: linear-gradient(90deg, #ffffff00, #ffffff46);
+    @media (max-width: 600px) {
+        padding: 0;
+        width: 100%;
+    }
 }
 
 .projects-display-container {
@@ -346,6 +373,9 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    @media (max-width: 600px) {
+        width: 100%;
+    }
 }
 
 .projects-card {
@@ -360,6 +390,10 @@ main {
     position: relative;
     color: white;
     background-color: #2E2C2F;
+    @media (max-width: 600px) {
+        width: 49%;
+        margin: .1rem;
+    }
 }
 
 .project-card-desc-container {
@@ -387,6 +421,11 @@ main {
     text-decoration-color: white;
     font-size: 1.5rem;
     margin: 0 1.5rem;
+    @media (max-width: 600px) {
+        margin: 0;
+        text-align: center;
+        font-size: 1rem;
+    }
 }
 
 .project-card-title:hover {
@@ -399,6 +438,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 600px) {
+        font-size: .7rem;
+    }
 }
 
 /* This signifies the first/top project on my portfolio. It is made to be larger than the following cards. */
@@ -406,6 +448,9 @@ main {
     width: 48%;
     height: 35%;
     aspect-ratio: 1;
+    @media (max-width: 600px) {
+        width: 80%;
+    }
 }
 
 .projects-cards-grid {
@@ -416,10 +461,17 @@ main {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    @media (max-width: 600px) {
+        width: 95%;
+    }
 }
 
 .project-card-img {
     width: 100%;
+    @media (max-width: 600px) {
+        height: 100%;
+        width: auto;
+    }
 }
 
 /* This is the section for my Resume */
@@ -432,7 +484,12 @@ main {
     align-items: center;
     justify-content: space-evenly;
     background: linear-gradient(90deg, #ffffff00, #ffffff46);
+    @media (max-width: 600px) {
+        padding: 0;
+        width: 100%;
+    }
 }
+
 
 .resume-container a {
     height: 70%;
@@ -441,6 +498,9 @@ main {
 .resume-img {
     height: 100%;
     transition: scale 0.3s ease;
+    @media (max-width: 600px) {
+        height: 70%;
+    }
 }
 
 .resume-img:hover {
@@ -458,6 +518,11 @@ main {
     justify-content: space-evenly;
     background: linear-gradient(90deg, #ffffff00, #ffffff46);
     border-bottom-right-radius: 50svh;
+    @media (max-width: 600px) {
+        padding: 0;
+        border-radius: 0;
+        width: 100%;
+    }
 }
 
 .contact-options-container {
@@ -468,6 +533,12 @@ main {
     align-items: center;
     justify-content: space-evenly;
     margin-left: 2rem;
+    @media (max-width: 600px) {
+        flex-direction: column;
+        margin: 0;
+        height: 80%;
+        width: 95%;
+    }
 }
 
 .contact-form {
@@ -478,6 +549,10 @@ main {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    @media (max-width: 600px) {
+        width: 100%;
+        min-width: 300px;
+    }
 }
 
 .contact-info {
@@ -487,12 +562,23 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @media (max-width: 600px) {
+        width: 100%;
+        font-size: 70%;
+        height: 70%;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .contact-info h3 {
     color: white;
     margin: 1rem;
     font-size: 150%;
+    @media (max-width: 600px) {
+        width: 60%;
+        margin: 0.5rem;
+    }
 }
 
 .contact-info h3 a {
@@ -521,6 +607,9 @@ main {
     padding-left: 1rem;
     font-family: "Poppins";
     outline: none;
+    @media (max-width: 600px) {
+        max-width: 90%;
+    }
 }
 
 .contact-form-inputs::placeholder {
